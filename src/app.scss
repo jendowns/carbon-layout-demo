@@ -1,0 +1,30 @@
+$feature-flags: (
+  grid-columns-16: true,
+);
+
+@import '@carbon/themes/scss/themes';
+
+$carbon--theme: $carbon--theme--g100;
+@include carbon--theme();
+
+@import 'carbon-components/scss/globals/scss/styles.scss';
+
+body {
+  background-color: $ui-background;
+}
+
+.bx--grid {
+  min-height: 100vh;
+  margin-top: 8px;
+}
+
+[class^="bx--col-"] {
+  background-color: $ui-02;
+  border: 1px solid $ui-background;
+  height: 100%;
+  min-height: 10rem;
+}
+
+.inner {
+  padding: 2rem;
+}
